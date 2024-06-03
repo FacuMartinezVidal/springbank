@@ -1,0 +1,15 @@
+services:
+  postgres:
+    image: 'postgres:alpine'
+    container_name: 'springbank'
+    environment:
+      - 'POSTGRES_DB=springbank'
+      - 'POSTGRES_PASSWORD=2908'
+      - 'POSTGRES_USER=fmartinezvidal'
+    ports:
+      - '5432:5432'
+    volumes:
+      - postgres_volume:/var/lib/postgresql
+
+volumes:
+  postgres_volume:
