@@ -23,4 +23,8 @@ public class LoansController {
             return null;
         }
     }
+    @GetMapping("/loans/all")
+    public String getAll(){
+        return "All loans";
+    }
 }
